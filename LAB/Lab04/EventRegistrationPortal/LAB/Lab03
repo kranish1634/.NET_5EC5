@@ -1,0 +1,184 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+
+var tracker = new ExpenseTracker();
+
+while (true)
+{
+    Console.WriteLine("\n--- EXPENSE TRACKER ---");
+    Console.WriteLine("1. Add Expense");
+    Console.WriteLine("2. List Expenses");
+    Console.WriteLine("3. Show Total");
+    Console.WriteLine("4. Remove Expense");
+    Console.WriteLine("5. Exit");
+    Console.Write("Choice: ");
+
+    try
+    {
+        switch (Console.ReadLine())
+        {
+            case "1":
+                Console.Write("How many records? ");
+                int n = int.Parse(Console.ReadLine()!);
+
+                for (int i = 0; i < n; i++)
+                {
+                    Console.Write("\nTitle: ");
+                    string title = Console.ReadLine()!;
+
+                    Console.Write("Amount: ");
+                    decimal amount = decimal.Parse(Console.ReadLine()!);
+
+                    Console.Write("Category: ");
+                    string category = Console.ReadLine()!;
+
+                    Console.Write("Date (yyyy-MM-dd, Enter for today): ");
+                    string dateInput = Console.ReadLine()!;
+                    DateTime date = string.IsNullOrWhiteSpace(dateInput)
+                        ? DateTime.Today
+                        : DateTime.ParseExact(
+                            dateInput, "yyyy-MM-dd",
+                            CultureInfo.InvariantCulture);
+
+                    if (date > DateTime.Today)
+                        throw new ExpenseException("Future dates are not allowed.");
+
+                    Console.WriteLine("Payment: 1.UPI  2.Cash  3.Bank  4.Check  5.Card  6.Other");
+                    Console.Write("Choice: ");
+
+                    PaymentMode mode = Console.ReadLine() switch
+                    {
+                        "1" => PaymentMode.UPI,
+                        "2" => PaymentMode.Cash,
+                        "3" => PaymentMode.BankTransfer,
+                        "4" => PaymentMode.Check,
+                        "5" => PaymentMode.Card,
+                        "6" => PaymentMode.Other,
+                        _ => throw new ExpenseException("Invalid payment mode.")
+                    };
+
+                    tracker.Add(new Expense
+                    {
+                        Title = title,
+                        Amount = amount,
+                        Category = category,
+                        Date = date,
+                        PaymentMode = mode
+                    });
+
+                    Console.WriteLine("Expense added.");
+                }
+                break;
+
+            case "2":
+                tracker.List();
+                break;
+
+            case "3":
+                Console.WriteLine($"Total: {tracker.Total():C}");
+                break;
+
+            case "4":
+                  if (!tracker.HasExpenses())
+                    {
+                       Console.WriteLine("No expenses recorded. Please enter a record first.");
+                       break;
+                  }
+
+                  Console.Write("Expense ID: ");
+                  tracker.Remove(int.Parse(Console.ReadLine()!));
+                  Console.WriteLine("Expense removed.");
+                  break;
+
+            case "5":
+                return;
+
+            default:
+                Console.WriteLine("Invalid choice.");
+                break;
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+}
+
+class ExpenseTracker
+{
+    private readonly List<Expense> expenses = new();
+    private int nextId = 1;
+
+    public bool HasExpenses()
+    {
+        return expenses.Count > 0;
+    }
+
+    public void Add(Expense e)
+    {
+        if (string.IsNullOrWhiteSpace(e.Title))
+            throw new ExpenseException("Title cannot be empty.");
+
+        if (string.IsNullOrWhiteSpace(e.Category))
+            throw new ExpenseException("Category cannot be empty.");
+
+        if (e.Amount <= 0)
+            throw new ExpenseException("Amount must be greater than zero.");
+
+        e.Id = nextId++;
+        expenses.Add(e);
+    }
+
+    public void List()
+    {
+        if (!expenses.Any())
+            throw new ExpenseException("No expenses recorded. Please enter a record first.");
+
+        foreach (var e in expenses)
+            Console.WriteLine(e);
+    }
+
+    public decimal Total()
+    {
+        if (!expenses.Any())
+            throw new ExpenseException("No expenses recorded. Please enter a record first.");
+
+        return expenses.Sum(e => e.Amount);
+    }
+
+    public void Remove(int id)
+    {
+        var e = expenses.FirstOrDefault(x => x.Id == id);
+
+        if (e == null)
+            throw new ExpenseException($"Expense ID {id} not found.");
+
+        expenses.Remove(e);
+    }
+}
+
+class Expense
+{
+    public int Id { get; set; }
+    public string Title { get; set; } = "";
+    public decimal Amount { get; set; }
+    public string Category { get; set; } = "";
+    public DateTime Date { get; set; }
+    public PaymentMode PaymentMode { get; set; }
+
+    public override string ToString() =>
+        $"[{Id}] {Date:yyyy-MM-dd} | {Title} | {Category} | " +
+        $"{PaymentMode} | {Amount:C}";
+}
+
+class ExpenseException : Exception
+{
+    public ExpenseException(string message) : base(message) { }
+}
+
+enum PaymentMode
+{
+    UPI, Cash, BankTransfer, Check, Card, Other
+}
