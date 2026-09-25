@@ -1,0 +1,174 @@
+using System;
+// Interface
+interface IPayroll
+{
+    void CalculateSalary();
+}
+// Base Class
+class Employee
+{
+    public int EmpId;
+    public string Name;
+    public decimal BasicSalary;
+    public Employee(int id, string name, decimal salary)
+    {
+        EmpId = id;
+        Name = name;
+        BasicSalary = salary;
+    }
+    public virtual void Display()
+    {
+        Console.WriteLine("\nEmployee ID : " + EmpId);
+        Console.WriteLine("Employee Name : " + Name);
+        Console.WriteLine("Basic Salary : Rs." + BasicSalary);
+    }
+}
+// Derived Class 1
+class PermanentEmployee : Employee, IPayroll
+{
+    private const decimal HraRate = 0.20m;
+    private const decimal DaRate = 0.10m;
+    private decimal HRA;
+    private decimal DA;
+    private decimal TotalSalary;
+    public PermanentEmployee(int id, string name, decimal salary)
+        : base(id, name, salary)
+    {
+    }
+    public void CalculateSalary()
+    {
+        HRA = BasicSalary * HraRate;
+        DA = BasicSalary * DaRate;
+        TotalSalary = BasicSalary + HRA + DA;
+    }
+
+    public override void Display()
+    {
+        base.Display();
+        Console.WriteLine("Employee Type : Permanent");
+        Console.WriteLine("HRA : Rs." + HRA);
+        Console.WriteLine("DA : Rs." + DA);
+        Console.WriteLine("Total Salary : Rs." + TotalSalary);
+    }
+}
+// Derived Class 2
+class ContractEmployee : Employee, IPayroll
+{
+    private const decimal FixedBonus = 5000m;
+    private decimal Bonus;
+    private decimal TotalSalary;
+    public ContractEmployee(int id, string name, decimal salary)
+        : base(id, name, salary)
+    {
+    }
+    public void CalculateSalary()
+    {
+        Bonus = FixedBonus;
+        TotalSalary = BasicSalary + Bonus;
+    }
+
+    public override void Display()
+    {
+        base.Display();
+        Console.WriteLine("Employee Type : Contract");
+        Console.WriteLine("Bonus : Rs." + Bonus);
+        Console.WriteLine("Total Salary : Rs." + TotalSalary);
+    }
+}
+// Main Class
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("===== Employee Payroll System =====");
+
+        int id = ReadPositiveInt("Enter Employee ID: ");
+        string name = ReadRequiredText("Enter Employee Name: ");
+        decimal salary = ReadPositiveDecimal("Enter Basic Salary: ");
+        int choice = ReadEmployeeTypeChoice();
+
+        Employee? employee = null;
+
+        if (choice == 1)
+        {
+            employee = new PermanentEmployee(id, name, salary);
+        }
+        else if (choice == 2)
+        {
+            employee = new ContractEmployee(id, name, salary);
+        }
+        else
+        {
+            Console.WriteLine("Invalid Choice");
+            return;
+        }
+
+        IPayroll payroll = (IPayroll)employee;
+        payroll.CalculateSalary();
+        PrintFinalReceipt(employee);
+    }
+
+    private static int ReadPositiveInt(string prompt)
+    {
+        while (true)
+        {
+            Console.Write(prompt);
+            string? input = Console.ReadLine();
+            if (int.TryParse(input, out int value) && value > 0)
+            {
+                return value;
+            }
+            Console.WriteLine("Please enter a valid positive whole number.");
+        }
+    }
+    private static decimal ReadPositiveDecimal(string prompt)
+    {
+        while (true)
+        {
+            Console.Write(prompt);
+            string? input = Console.ReadLine();
+            if (decimal.TryParse(input, out decimal value) && value > 0)
+            {
+                return value;
+            }
+            Console.WriteLine("Please enter a valid positive salary amount.");
+        }
+    }
+    private static string ReadRequiredText(string prompt)
+    {
+        while (true)
+        {
+            Console.Write(prompt);
+            string? input = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(input))
+            {
+                return input.Trim();
+            }
+            Console.WriteLine("Name cannot be empty. Please enter a valid name.");
+        }
+    }
+    private static int ReadEmployeeTypeChoice()
+    {
+        while (true)
+        {
+            Console.WriteLine("\nSelect Employee Type");
+            Console.WriteLine("1. Permanent Employee");
+            Console.WriteLine("2. Contract Employee");
+            Console.Write("Enter Choice: ");
+            string? input = Console.ReadLine();
+            if (int.TryParse(input, out int choice) && (choice == 1 || choice == 2))
+            {
+                return choice;
+            }
+            Console.WriteLine("Invalid choice. Enter 1 for Permanent or 2 for Contract.");
+        }
+    }
+
+    private static void PrintFinalReceipt(Employee employee)
+    {
+        Console.WriteLine("\n===== Final Payroll Receipt =====");
+        employee.Display();
+        Console.WriteLine("Payroll calculation completed successfully.");
+        Console.WriteLine("=================================\n");
+    }
+}
