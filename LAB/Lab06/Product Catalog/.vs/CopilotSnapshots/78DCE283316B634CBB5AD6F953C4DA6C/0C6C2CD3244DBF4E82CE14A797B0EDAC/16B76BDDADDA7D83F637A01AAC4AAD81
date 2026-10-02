@@ -1,0 +1,163 @@
+﻿@model ProductCatalog.Models.Product
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Details</title>
+
+    <style>
+        :root {
+            --bg: #f5f7fb;
+            --card: #ffffff;
+            --primary: #0b5ed7;
+            --muted: #6b7280;
+            --border: #e6eef6;
+            --accent: #0f172a;
+        }
+
+        body {
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--accent);
+            margin: 28px;
+        }
+
+        .details {
+            max-width: 720px;
+            margin: 24px auto;
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+            text-align: left;
+            color: var(--primary);
+        }
+
+        .meta {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .rows {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .label {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .value {
+            font-size: 1rem;
+            color: #111827;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .price {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .description-row { grid-column: 1 / -1; }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 18px;
+            background: transparent;
+            color: var(--primary);
+            padding: 8px 14px;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid rgba(11,94,215,0.12);
+            transition: background .12s, transform .08s;
+        }
+
+        .back-button:hover {
+            background: rgba(11,94,215,0.06);
+            transform: translateY(-2px);
+        }
+
+        @@media (max-width: 720px) {
+            .rows { grid-template-columns: 1fr; }
+            .details { padding: 16px; }
+            h1 { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="details">
+
+        <div class="meta">
+            <h1>Product Details</h1>
+        </div>
+
+        <div class="rows">
+            <div class="row">
+                <span class="label">Product ID</span>
+                <span class="value">@Model.Id</span>
+            </div>
+
+            <div class="row">
+                <span class="label">Brand</span>
+                <span class="value">@Model.Brand</span>
+            </div>
+
+            <div class="row">
+                <span class="label">Product Name</span>
+                <span class="value">@Model.Name</span>
+            </div>
+
+            <div class="row">
+                <span class="label">Category</span>
+                <span class="value">@Model.Category</span>
+            </div>
+
+            <div class="row">
+                <span class="label">Stock</span>
+                <span class="value">@Model.Stock</span>
+            </div>
+
+            <div class="row">
+                <span class="label">Price</span>
+                <span class="value price">₹@Model.Price</span>
+            </div>
+
+            <div class="row description-row">
+                <span class="label">Description</span>
+                <span class="value">@Model.Description</span>
+            </div>
+        </div>
+
+        <a class="back-button"
+           asp-controller="Product"
+           asp-action="Index">
+            Back to Products
+        </a>
+
+    </div>
+
+</body>
+</html>

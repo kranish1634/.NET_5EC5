@@ -1,0 +1,191 @@
+@model List<ProductCatalog.Models.Product>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Catalog</title>
+
+    <style>
+        :root {
+            --bg: #f5f7fb;
+            --card: #ffffff;
+            --primary: #0b5ed7;
+            --muted: #6c757d;
+            --accent: #198754;
+            --border: #e6eef6;
+        }
+
+        body {
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            background: var(--bg);
+            color: #1f2937;
+            margin: 24px;
+        }
+
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            margin: 0;
+            color: #0f172a;
+        }
+
+        .add-button {
+            background: var(--accent);
+            color: #fff;
+            padding: 10px 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(16, 24, 40, 0.06);
+            transition: transform .08s ease, box-shadow .12s ease;
+            white-space: nowrap;
+        }
+
+        .add-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(16, 24, 40, 0.08);
+        }
+
+        .table-wrapper {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px;
+            box-shadow: 0 2px 8px rgba(16, 24, 40, 0.03);
+            overflow: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+
+        th, td {
+            padding: 12px 14px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            vertical-align: middle;
+        }
+
+        th {
+            background: linear-gradient(180deg, var(--primary), #0a58ca);
+            color: #fff;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            text-align: left;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #fbfdff;
+        }
+
+        tbody tr:hover {
+            background: #eef6ff;
+        }
+
+        .price {
+            white-space: nowrap;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .button {
+            display: inline-block;
+            background: transparent;
+            color: var(--primary);
+            padding: 7px 12px;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background .12s, transform .08s;
+        }
+
+        .button:hover {
+            background: rgba(11, 94, 215, 0.06);
+            transform: translateY(-1px);
+        }
+
+        .actions {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        @@media (max-width: 600px) {
+            th, td { padding: 10px 8px; font-size: .95rem; }
+            h1 { font-size: 1.25rem; }
+            .top-bar { flex-direction: column; align-items: stretch; }
+            .add-button { align-self: flex-end; }
+            .table-wrapper { padding: 8px; }
+            table { min-width: 600px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <h1>Product Catalog</h1>
+
+        <a class="add-button"
+           asp-controller="Product"
+           asp-action="Create">
+            Add New Product
+        </a>
+    </header>
+
+    <div class="table-wrapper">
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Brand</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+
+                <td>@product.Name</td>
+
+                <td>@product.Category</td>
+
+                <td>@product.Brand</td>
+
+                <td class="price">₹@product.Price</td>
+
+                <td>@product.Stock</td>
+
+                <td>@product.Description</td>
+
+                <td>
+                    <a class="button"
+                       asp-controller="Product"
+                       asp-action="Details"
+                       asp-route-id="@product.Id">
+                        View Details
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </table>
+    </div>
+
+</body>
+</html>

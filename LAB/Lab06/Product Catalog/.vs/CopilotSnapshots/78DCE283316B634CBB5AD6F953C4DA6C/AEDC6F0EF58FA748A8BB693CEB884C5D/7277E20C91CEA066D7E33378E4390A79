@@ -1,0 +1,96 @@
+﻿@model ProductCatalog.Models.Product
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Details</title>
+
+    <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 40px;
+            }
+
+            .details {
+                width: 500px;
+                margin: auto;
+                border: 1px solid #ccc;
+                padding: 25px;
+                border-radius: 8px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .row {
+                margin: 15px 0;
+            }
+
+            .label {
+                font-weight: bold;
+            }
+
+            .back-button {
+                display: inline-block;
+                margin-top: 20px;
+                background-color: #333;
+                color: white;
+                padding: 10px 15px;
+                text-decoration: none;
+                border-radius: 4px;
+            }
+    </style>
+</head>
+
+<body>
+
+    <div class="details">
+
+        <h1>Product Details</h1>
+
+        <div class="row">
+            <span class="label">Product ID:</span>
+            @Model.Id
+        </div>
+
+        <div class="row">
+            <span class="label">Product Name:</span>
+            @Model.Name
+        </div>
+
+        <div class="row">
+            <span class="label">Category:</span>
+            @Model.Category
+        </div>
+
+        <div class="row">
+            <span class="label">Brand:</span>
+            @Model.Brand
+        </div>
+
+        <div class="row">
+            <span class="label">Price:</span>
+            ₹@Model.Price
+        </div>
+
+        <div class="row">
+            <span class="label">Stock:</span>
+            @Model.Stock
+        </div>
+
+        <div class="row">
+            <span class="label">Description:</span>
+            @Model.Description
+        </div>
+
+        <a class="back-button"
+           asp-controller="Product"
+           asp-action="Index">
+            Back to Products
+        </a>
+
+    </div>
+
+</body>
+</html>

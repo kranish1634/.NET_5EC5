@@ -1,0 +1,71 @@
+﻿@model ProductCatalog.Models.Product
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Product</title>
+</head>
+
+<body>
+
+    <h1>Add New Product</h1>
+
+    <form asp-controller="Product"
+          asp-action="Create"
+          method="post">
+
+        <label>Product Name</label>
+        <br />
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+
+        <br /><br />
+
+        <label>Category</label>
+        <br />
+        <input asp-for="Category" />
+        <span asp-validation-for="Category"></span>
+
+        <br /><br />
+
+        <label>Brand</label>
+        <br />
+        <input asp-for="Brand" />
+        <span asp-validation-for="Brand"></span>
+
+        <br /><br />
+
+        <label>Price</label>
+        <br />
+        <input asp-for="Price" />
+        <span asp-validation-for="Price"></span>
+
+        <br /><br />
+
+        <label>Stock</label>
+        <br />
+        <input asp-for="Stock" />
+
+        <br /><br />
+
+        <label>Description</label>
+        <br />
+        <textarea asp-for="Description"></textarea>
+
+        <br /><br />
+
+        <button type="submit">
+            Add Product
+        </button>
+
+    </form>
+
+    <br />
+
+    <a asp-controller="Product"
+       asp-action="Index">
+        Back to Products
+    </a>
+
+</body>
+</html>
