@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\.NET Sem 5\\lab\\Lab 07\\FeedbackManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3A4F68-7489-C4A3-754E-58213EF30B2F}|FeedbackManagement.csproj|c:\\.net sem 5\\lab\\lab 07\\feedbackmanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0F3A4F68-7489-C4A3-754E-58213EF30B2F}|FeedbackManagement.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3A4F68-7489-C4A3-754E-58213EF30B2F}|FeedbackManagement.csproj|c:\\.net sem 5\\lab\\lab 07\\feedbackmanagement\\views\\shared\\_feedbackform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0F3A4F68-7489-C4A3-754E-58213EF30B2F}|FeedbackManagement.csproj|solutionrelative:views\\shared\\_feedbackform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3A4F68-7489-C4A3-754E-58213EF30B2F}|FeedbackManagement.csproj|c:\\.net sem 5\\lab\\lab 07\\feedbackmanagement\\views\\feedback\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0F3A4F68-7489-C4A3-754E-58213EF30B2F}|FeedbackManagement.csproj|solutionrelative:views\\feedback\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3A4F68-7489-C4A3-754E-58213EF30B2F}|FeedbackManagement.csproj|c:\\.net sem 5\\lab\\lab 07\\feedbackmanagement\\views\\feedback\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0F3A4F68-7489-C4A3-754E-58213EF30B2F}|FeedbackManagement.csproj|solutionrelative:views\\feedback\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3A4F68-7489-C4A3-754E-58213EF30B2F}|FeedbackManagement.csproj|c:\\.net sem 5\\lab\\lab 07\\feedbackmanagement\\views\\feedback\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0F3A4F68-7489-C4A3-754E-58213EF30B2F}|FeedbackManagement.csproj|solutionrelative:views\\feedback\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3A4F68-7489-C4A3-754E-58213EF30B2F}|FeedbackManagement.csproj|c:\\.net sem 5\\lab\\lab 07\\feedbackmanagement\\controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3A4F68-7489-C4A3-754E-58213EF30B2F}|FeedbackManagement.csproj|solutionrelative:controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3A4F68-7489-C4A3-754E-58213EF30B2F}|FeedbackManagement.csproj|c:\\.net sem 5\\lab\\lab 07\\feedbackmanagement\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3A4F68-7489-C4A3-754E-58213EF30B2F}|FeedbackManagement.csproj|solutionrelative:models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Feedback.cs",
+              "DocumentMoniker": "C:\\.NET Sem 5\\lab\\Lab 07\\FeedbackManagement\\Models\\Feedback.cs",
+              "RelativeDocumentMoniker": "Models\\Feedback.cs",
+              "ToolTip": "C:\\.NET Sem 5\\lab\\Lab 07\\FeedbackManagement\\Models\\Feedback.cs",
+              "RelativeToolTip": "Models\\Feedback.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-06T05:25:33.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FeedbackController.cs",
+              "DocumentMoniker": "C:\\.NET Sem 5\\lab\\Lab 07\\FeedbackManagement\\Controllers\\FeedbackController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FeedbackController.cs",
+              "ToolTip": "C:\\.NET Sem 5\\lab\\Lab 07\\FeedbackManagement\\Controllers\\FeedbackController.cs",
+              "RelativeToolTip": "Controllers\\FeedbackController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-06T05:25:32.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\.NET Sem 5\\lab\\Lab 07\\FeedbackManagement\\Views\\Feedback\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Feedback\\Index.cshtml",
+              "ToolTip": "C:\\.NET Sem 5\\lab\\Lab 07\\FeedbackManagement\\Views\\Feedback\\Index.cshtml",
+              "RelativeToolTip": "Views\\Feedback\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-06T05:25:29.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\.NET Sem 5\\lab\\Lab 07\\FeedbackManagement\\Views\\Feedback\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Feedback\\Details.cshtml",
+              "ToolTip": "C:\\.NET Sem 5\\lab\\Lab 07\\FeedbackManagement\\Views\\Feedback\\Details.cshtml",
+              "RelativeToolTip": "Views\\Feedback\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-06T05:25:28.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\.NET Sem 5\\lab\\Lab 07\\FeedbackManagement\\Views\\Feedback\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Feedback\\Create.cshtml",
+              "ToolTip": "C:\\.NET Sem 5\\lab\\Lab 07\\FeedbackManagement\\Views\\Feedback\\Create.cshtml",
+              "RelativeToolTip": "Views\\Feedback\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-06T05:25:27.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_FeedbackForm.cshtml",
+              "DocumentMoniker": "C:\\.NET Sem 5\\lab\\Lab 07\\FeedbackManagement\\Views\\Shared\\_FeedbackForm.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_FeedbackForm.cshtml",
+              "ToolTip": "C:\\.NET Sem 5\\lab\\Lab 07\\FeedbackManagement\\Views\\Shared\\_FeedbackForm.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_FeedbackForm.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-06T05:25:23.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\.NET Sem 5\\lab\\Lab 07\\FeedbackManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\.NET Sem 5\\lab\\Lab 07\\FeedbackManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-06T05:25:21.863Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

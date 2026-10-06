@@ -1,0 +1,27 @@
+﻿@model FeedbackManagement.Models.Feedback
+
+@{
+    ViewData["Title"] = "Give Feedback";
+}
+
+<h2 class="mb-4">Give Your Feedback</h2>
+
+<div class="card">
+    <div class="card-body">
+
+        <form asp-action="Create" method="post">
+
+            @Html.Partial("_FeedbackForm", Model)
+
+            <button type="submit" class="btn btn-success">
+                Submit Feedback
+            </button>
+
+            <a asp-action="Index" class="btn btn-secondary">
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+</div>

@@ -1,0 +1,44 @@
+﻿@model FeedbackManagement.Models.Feedback
+
+@{
+    ViewData["Title"] = "Feedback Details";
+}
+
+<h2>Feedback Details</h2>
+
+<div class="card mt-3">
+
+    <div class="card-body">
+
+        <h4>@Model.Subject</h4>
+
+        <hr />
+
+        <p>
+            <strong>Name:</strong>
+            @Model.Name
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            @Model.Email
+        </p>
+
+        <p>
+            <strong>Rating:</strong>
+            @Model.Rating / 5
+        </p>
+
+        <p>
+            <strong>Feedback:</strong>
+            @Model.Message
+        </p>
+
+        <a asp-action="Index"
+           class="btn btn-secondary">
+            Back
+        </a>
+
+    </div>
+
+</div>
