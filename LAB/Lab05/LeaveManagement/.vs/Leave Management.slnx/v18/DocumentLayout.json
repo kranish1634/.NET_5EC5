@@ -1,0 +1,96 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\.NET Sem 5\\lab\\Lab 05\\Leave Management\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5230C4CE-B922-4706-9657-2B6E69E5599C}|Leave Management.csproj|c:\\.net sem 5\\lab\\lab 05\\leave management\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{5230C4CE-B922-4706-9657-2B6E69E5599C}|Leave Management.csproj|solutionrelative:default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5230C4CE-B922-4706-9657-2B6E69E5599C}|Leave Management.csproj|c:\\.net sem 5\\lab\\lab 05\\leave management\\leave.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{5230C4CE-B922-4706-9657-2B6E69E5599C}|Leave Management.csproj|solutionrelative:leave.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5230C4CE-B922-4706-9657-2B6E69E5599C}|Leave Management.csproj|c:\\.net sem 5\\lab\\lab 05\\leave management\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5230C4CE-B922-4706-9657-2B6E69E5599C}|Leave Management.csproj|solutionrelative:default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5230C4CE-B922-4706-9657-2B6E69E5599C}|Leave Management.csproj|c:\\.net sem 5\\lab\\lab 05\\leave management\\leave.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5230C4CE-B922-4706-9657-2B6E69E5599C}|Leave Management.csproj|solutionrelative:leave.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Leave.aspx.cs",
+              "DocumentMoniker": "C:\\.NET Sem 5\\lab\\Lab 05\\Leave Management\\Leave.aspx.cs",
+              "RelativeDocumentMoniker": "Leave.aspx.cs",
+              "ToolTip": "C:\\.NET Sem 5\\lab\\Lab 05\\Leave Management\\Leave.aspx.cs [Read Only]",
+              "RelativeToolTip": "Leave.aspx.cs [Read Only]",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwCkAAAAAAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T20:17:01.858Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Default.aspx.cs",
+              "DocumentMoniker": "C:\\.NET Sem 5\\lab\\Lab 05\\Leave Management\\Default.aspx.cs",
+              "RelativeDocumentMoniker": "Default.aspx.cs",
+              "ToolTip": "C:\\.NET Sem 5\\lab\\Lab 05\\Leave Management\\Default.aspx.cs [Read Only]",
+              "RelativeToolTip": "Default.aspx.cs [Read Only]",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T20:16:57.021Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Leave.aspx",
+              "DocumentMoniker": "C:\\.NET Sem 5\\lab\\Lab 05\\Leave Management\\Leave.aspx",
+              "RelativeDocumentMoniker": "Leave.aspx",
+              "ToolTip": "C:\\.NET Sem 5\\lab\\Lab 05\\Leave Management\\Leave.aspx [Read Only]",
+              "RelativeToolTip": "Leave.aspx [Read Only]",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-09-23T20:16:50.425Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "C:\\.NET Sem 5\\lab\\Lab 05\\Leave Management\\Default.aspx",
+              "RelativeDocumentMoniker": "Default.aspx",
+              "ToolTip": "C:\\.NET Sem 5\\lab\\Lab 05\\Leave Management\\Default.aspx [Read Only]",
+              "RelativeToolTip": "Default.aspx [Read Only]",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-09-23T20:16:28.281Z",
+              "EditorCaption": " [Read Only]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
